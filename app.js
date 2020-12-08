@@ -10,6 +10,8 @@ var papel = document.getElementById("papel");
 var tijeras = document.getElementById("tijeras");
 var userScore = document.getElementById("user-score");
 var pcScore = document.getElementById("pc-score");
+var frase = document.getElementById("frase");
+var resultado = document.getElementById("resultado");
 
 function updateUser(eleccion) {
   userChoice = eleccion;
@@ -71,8 +73,11 @@ function checkRes() {
 }
 
 function mostrarResultado() {
-  userScore.innerHTML = contUser;
+  userScore.textContent = contUser;
   pcScore.textContent = contPc;
+  frase.textContent =
+    "Has elegido: " + userChoice + ". El ordenador ha elegido: " + pcChoice;
+  resultado.textContent = res;
 }
 
 function main() {
